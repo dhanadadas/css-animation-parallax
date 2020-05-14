@@ -62,31 +62,6 @@ html, body {
     background: url("img/background.jpg") 50% 100% / cover no-repeat;
 }
 
-.parallax_rope{
-    position: absolute;
-    width: 120%;
-    height: 10%;
-}
-
-.parallax_rope img{
-    width:  100%;
-}
-
-.parallax_rope1{
-    top: 5%;
-    transform: scale(1);
-}
-
-.parallax_rope2{
-    top: -1.66667%;
-    transform: scale(1.05556);
-}
-
-.parallax_rope3{
-    top: -11.66667%;
-    transform: scale(1.13889);
-}
-
 .parallax_element{
     position: absolute;
 }
@@ -96,76 +71,33 @@ html, body {
     transform-origin: 50% 0;
     width: 280px;
     height: 280px;
-    margin: 0px 0px 0px -140px;
-    animation: swing 2s infinite alternate cubic-bezier(0.455,0.03,0.515,0.955);
+    /*margin: 0px 0px 0px 200px;*/
+    animation: swing 20s infinite alternate cubic-bezier(0.455,0.03,0.515,0.955);
 }
-
-.parallax_element_1{
+.sun{
+    opacity: .4;
     top: 28%;
     left: 20%;
+    margin: -100px 220px 220px 120px !important;
 }
-.parallax_element_1 span{
-    background: url("img/clouds/ext/board-cloud-2.png") 0 0 / 100% no-repeat;
-}
-
-.parallax_element_2{
-    top: 46%;
-    left: 40%;
-}
-.parallax_element_2 span{
-    background: url("img/clouds/ext/board-cloud-1.png")0 0 / 100% no-repeat;
+.sun span{
+    background: url("img/sun.png") 0 0 / 100% no-repeat;
 }
 
-.parallax_element_3{
-    top: 24%;
-    left: 80%;
-}
-.parallax_element_3 span{
-    background: url("img/clouds/ext/board-birds.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_4{
+.moon{
     top: 10%;
-    left: 17%;
+    left: 10%;
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0px 0px 0px 780px !important;
 }
-.parallax_element_4 span{
-    background: url("img/clouds/ext/board-cloud-2.png")0 0 / 100% no-repeat;
+.moon span{
+    opacity: .1;
+    background: url("img/moon.png") 0 0 / 20% no-repeat;
 }
-
-.parallax_element_5{
-    top: 50%;
-    left: 56%;
-}
-.parallax_element_5 span{
-    background: url("img/clouds/ext/board-cloud-4.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_6{
-    top: 30%;
-    left: 57%;
-}
-.parallax_element_6 span{
-    background: url("img/clouds/ext/board-birds.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_7{
-    top: 60%;
-    left: 65%;
-}
-.parallax_element_7 span{
-    background: url("img/clouds/ext/board-cloud-2.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_8{
-    top: 80%;
-    left: 45%;
-}
-.parallax_element_8 span{
-    background: url("img/clouds/ext/board-cloud-3.png")0 0 / 100% no-repeat;
-}
-
 
 .parallax_sky{
+    opacity: .9;
     position: absolute;
     background:  url("img/waves/sky.png")0 0 / auto 101% repeat-x;
     left: -100%;
@@ -244,14 +176,14 @@ html, body {
     background:url("img/waves/wave-plain.png")0 0 / auto 101% repeat-x;
 }
 
-.parallax_litehouse{
-background: url("img/lighthouse.png") 0 0 / 101% no-repeat;
+.parallax_Krishna{
+background: url("img/Krishna.png") 0 0 / 101% no-repeat;
     width: 300px;
     height: 330px;
     position: absolute;
     right: 12%;
     bottom: 140px;/*50px;*/
-    animation: litehouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    animation: Krishna 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .content{
@@ -276,7 +208,7 @@ background: url("img/lighthouse.png") 0 0 / 101% no-repeat;
     }
 }
 
-@keyframes litehouse {
+@keyframes Krishna {
     0%{
         transform: translate3d(15%,0,0) rotateY(10deg);
     }
@@ -284,3 +216,106 @@ background: url("img/lighthouse.png") 0 0 / 101% no-repeat;
         transform: translate3d(-15%,0,0) rotateY(-10deg);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.parallax_element_1{
+    top: 28%;
+    left: 20%;
+}
+.parallax_element_1 span{
+    background: url("img/clouds/ext/board-cloud-2.png") 0 0 / 100% no-repeat;
+}
+
+.parallax_element_2{
+    top: 46%;
+    left: 40%;
+}
+.parallax_element_2 span{
+    background: url("img/clouds/ext/board-cloud-1.png")0 0 / 100% no-repeat;
+}
+
+.parallax_element_3{
+    top: 24%;
+    left: 80%;
+}
+.parallax_element_3 span{
+    background: url("img/clouds/ext/board-birds.png")0 0 / 100% no-repeat;
+}
+
+.parallax_element_4{
+    top: 10%;
+    left: 17%;
+}
+.parallax_element_4 span{
+    background: url("img/clouds/ext/board-cloud-2.png")0 0 / 100% no-repeat;
+}
+
+.parallax_element_5{
+    top: 50%;
+    left: 56%;
+}
+.parallax_element_5 span{
+    background: url("img/clouds/ext/board-cloud-4.png")0 0 / 100% no-repeat;
+}
+
+.parallax_element_6{
+    top: 30%;
+    left: 57%;
+}
+.parallax_element_6 span{
+    background: url("img/clouds/ext/board-birds.png")0 0 / 100% no-repeat;
+}
+
+.parallax_element_7{
+    top: 60%;
+    left: 65%;
+}
+.parallax_element_7 span{
+    background: url("img/clouds/ext/board-cloud-2.png")0 0 / 100% no-repeat;
+}
+
+.parallax_element_8{
+    top: 80%;
+    left: 45%;
+}
+.parallax_element_8 span{
+    background: url("img/clouds/ext/board-cloud-3.png")0 0 / 100% no-repeat;
+}
+*/
+/*
+.parallax_rope{
+    position: absolute;
+    width: 120%;
+    height: 10%;
+}
+
+.parallax_rope img{
+    width:  100%;
+}
+
+.parallax_rope1{
+    top: 5%;
+    transform: scale(1);
+}
+
+.parallax_rope2{
+    top: -1.66667%;
+    transform: scale(1.05556);
+}
+
+.parallax_rope3{
+    top: -11.66667%;
+    transform: scale(1.13889);
+}
+*/
