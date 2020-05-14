@@ -79,6 +79,7 @@ html, body {
     top: 28%;
     left: 20%;
     margin: -100px 220px 220px 120px !important;
+    animation: sun 20s infinite alternate cubic-bezier(0.455,0.03,0.515,0.955);
 }
 .sun span{
     background: url("img/sun.png") 0 0 / 100% no-repeat;
@@ -96,6 +97,7 @@ html, body {
     background: url("img/moon.png") 0 0 / 20% no-repeat;
 }
 
+
 .parallax_sky{
     opacity: .9;
     position: absolute;
@@ -107,25 +109,26 @@ html, body {
 .parallax_sky_1{
     bottom: 320px;
     height: 320px;
-    animation: wave 17.111111s 0.1s infinite linear;
+    animation: wave 17.111111s 0.1s infinite linear, sky 17.111111s 0.1s infinite linear;
+
     background:url("img/waves/sky2.png")0 0 / auto 101% repeat-x;
 }
 .parallax_sky_2{
     bottom: 300px;
     height: 320px;
-    animation: wave 17.111111s 0.1s infinite linear;
+    animation: wave 17.111111s 0.1s infinite linear, sky 17.111111s 0.1s infinite linear;
     background:url("img/waves/sky2.png")0 0 / auto 101% repeat-x;
 }
 .parallax_sky_3{
     bottom: 250px;
     height: 252px;
-    animation: wave 32.666667s 0.1s infinite linear;
+    animation: wave 32.666667s 0.1s infinite linear, sky 32.666667s 0.1s infinite linear;
     background:url("img/waves/sky.png")0 0 / auto 101% repeat-x;
 }
 .parallax_sky_4{
     bottom: 180px;
     height: 180px;
-    animation: wave 53.111111s 0.1s infinite linear;
+    animation: wave 53.111111s 0.1s infinite linear, sky 53.111111s 0.1s infinite linear;
     background:url("img/waves/sky.png")0 0 / auto 101% repeat-x;
 }
 
@@ -185,10 +188,29 @@ background: url("img/Krishna.png") 0 0 / 101% no-repeat;
     bottom: 140px;/*50px;*/
     animation: Krishna 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
+.parallax_gopi{
+    background: url("img/gopi.png") 0 0 / 101% no-repeat;
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 17%;
+    bottom: 140px;/*50px;*/
+    animation: tree 20s infinite linear;
+    }
+.parallax_tree{
+    background: url("img/tree.png") 0 0 / 101% no-repeat;
+    width: 660px;
+    height: 660px;
+    position: absolute;
+    left: 1%;
+    bottom: -90px;/*50px;*/
+
+}
 
 .content{
 
 }
+
 
 @keyframes swing {
      0%{
@@ -196,6 +218,18 @@ background: url("img/Krishna.png") 0 0 / 101% no-repeat;
      }
     100%{
         transform: rotateZ(-10deg);
+    }
+}
+@keyframes tree {
+    0%{
+        transform: rotateZ(1deg) rotateZ(1deg) rotateY(1deg) rotateX(1deg) translate3d(2%,2%,0);
+    }
+    40%{
+        transform: rotatez(-1deg) rotateX(-1deg) rotateY(-1deg) rotateZ(-1deg) translate3d(0,0,0);
+    }
+    100%{
+        transform: rotateZ(1deg) rotateZ(1deg) rotateY(1deg) rotateX(1deg) translate3d(2%,2%,0);
+
     }
 }
 
@@ -216,106 +250,64 @@ background: url("img/Krishna.png") 0 0 / 101% no-repeat;
         transform: translate3d(-15%,0,0) rotateY(-10deg);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.parallax_element_1{
-    top: 28%;
-    left: 20%;
+@keyframes sky {
+    0%{
+        opacity:.9;
+    }
+    50%{
+        opacity:.2;
+    }
+    100%{
+        opacity:.9;
+    }
 }
-.parallax_element_1 span{
-    background: url("img/clouds/ext/board-cloud-2.png") 0 0 / 100% no-repeat;
+@keyframes sun {
+    0%{
+        opacity:.4;
+    }
+    50%{
+        opacity:.8;
+    }
+    100%{
+        opacity:.4;
+    }
 }
+.flower {
+    -webkit-animation-name: cog;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: cog;
+    -moz-animation-duration: 10s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: cog;
+    -ms-animation-duration: 10s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
 
-.parallax_element_2{
-    top: 46%;
-    left: 40%;
+    animation-name: cog;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-.parallax_element_2 span{
-    background: url("img/clouds/ext/board-cloud-1.png")0 0 / 100% no-repeat;
+@-ms-keyframes cog {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
 }
-
-.parallax_element_3{
-    top: 24%;
-    left: 80%;
+@-moz-keyframes cog {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
 }
-.parallax_element_3 span{
-    background: url("img/clouds/ext/board-birds.png")0 0 / 100% no-repeat;
+@-webkit-keyframes cog {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
 }
-
-.parallax_element_4{
-    top: 10%;
-    left: 17%;
+@keyframes cog {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
-.parallax_element_4 span{
-    background: url("img/clouds/ext/board-cloud-2.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_5{
-    top: 50%;
-    left: 56%;
-}
-.parallax_element_5 span{
-    background: url("img/clouds/ext/board-cloud-4.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_6{
-    top: 30%;
-    left: 57%;
-}
-.parallax_element_6 span{
-    background: url("img/clouds/ext/board-birds.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_7{
-    top: 60%;
-    left: 65%;
-}
-.parallax_element_7 span{
-    background: url("img/clouds/ext/board-cloud-2.png")0 0 / 100% no-repeat;
-}
-
-.parallax_element_8{
-    top: 80%;
-    left: 45%;
-}
-.parallax_element_8 span{
-    background: url("img/clouds/ext/board-cloud-3.png")0 0 / 100% no-repeat;
-}
-*/
-/*
-.parallax_rope{
-    position: absolute;
-    width: 120%;
-    height: 10%;
-}
-
-.parallax_rope img{
-    width:  100%;
-}
-
-.parallax_rope1{
-    top: 5%;
-    transform: scale(1);
-}
-
-.parallax_rope2{
-    top: -1.66667%;
-    transform: scale(1.05556);
-}
-
-.parallax_rope3{
-    top: -11.66667%;
-    transform: scale(1.13889);
-}
-*/
