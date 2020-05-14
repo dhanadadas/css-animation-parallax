@@ -211,7 +211,6 @@ background: url("img/Krishna.png") 0 0 / 101% no-repeat;
 
 }
 
-
 @keyframes swing {
      0%{
          transform: rotateZ(10deg);
