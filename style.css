@@ -99,6 +99,9 @@ html, body {
 
 
 .parallax_sky{
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    filter: blur(1px);
     opacity: .9;
     position: absolute;
     background:  url("img/waves/sky.png")0 0 / auto 101% repeat-x;
@@ -107,13 +110,16 @@ html, body {
 }
 
 .parallax_sky_1{
-    bottom: 320px;
-    height: 320px;
+    bottom: 420px;
+    filter: blur(3px);
+    opacity: .5;
+    height: 520px;
     animation: wave 17.111111s 0.1s infinite linear, sky 17.111111s 0.1s infinite linear;
 
     background:url("img/waves/sky2.png")0 0 / auto 101% repeat-x;
 }
 .parallax_sky_2{
+    filter: blur(2px);
     bottom: 300px;
     height: 320px;
     animation: wave 17.111111s 0.1s infinite linear, sky 17.111111s 0.1s infinite linear;
@@ -170,6 +176,7 @@ html, body {
     bottom: -1px;
     height: 230px;
     animation: wave 4.8888s 0.1s infinite linear;
+
 }
 
 .parallax_wave_6{
@@ -177,6 +184,8 @@ html, body {
     height: 288px;
     animation: wave 4.5s 0.1s infinite linear;
     background:url("img/waves/wave-plain.png")0 0 / auto 101% repeat-x;
+    filter: blur(2px);
+
 }
 
 .parallax_Krishna{
